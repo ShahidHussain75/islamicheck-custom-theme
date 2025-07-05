@@ -1,24 +1,24 @@
 <?php
 /**
- * IslamiCheck Theme functions and definitions
+ * Custom Dokan Theme functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package IslamiCheck
+ * @package custom-dokan
  * @since 1.0.0
  */
 
 /**
  * Define Constants
  */
-define( 'CHILD_THEME_ISLAMICHECK_VERSION', '1.0.0' );
+define( 'CHILD_THEME_custom_dokan_VERSION', '1.0.0' );
 
 /**
  * Enqueue styles
  */
 function child_enqueue_styles() {
 
-	wp_enqueue_style( 'islamicheck-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_ISLAMICHECK_VERSION, 'all' );
+	wp_enqueue_style( 'custom-dokan-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_custom_dokan_VERSION, 'all' );
 
 }
 

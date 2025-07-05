@@ -485,11 +485,11 @@ class Improved_Vendor_Registration {
             $last_name = sanitize_text_field($_POST['last_name'] ?? '');
             $full_name = $first_name . ' ' . $last_name;
             
-            $subject = sprintf(__('Willkommen bei IslamiCheck, %s!', 'dokan'), $full_name);
+            $subject = sprintf(__('Willkommen bei, %s!', 'dokan'), $full_name);
 
             $headers = array(
                 'Content-Type: text/html; charset=UTF-8',
-                'From: Islami Check <' . get_option('admin_email') . '>'
+                'From:  <' . get_option('admin_email') . '>'
             );
 
             // Path to the PDF file to attach
@@ -506,21 +506,21 @@ class Improved_Vendor_Registration {
 
             $message = sprintf(
                 '<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 5px;">
-    <h2 style="color: #333;">Willkommen bei Islami Check! 🎉</h2>
+    <h2 style="color: #333;">Willkommen bei! 🎉</h2>
     <p>Sehr geehrte Damen und Herren,</p>
-    <p>vielen Dank für Ihre Registrierung bei IslamiCheck.</p>
+    <p>vielen Dank für Ihre Registrierung bei.</p>
     <p>Unsere Aufgabe ist es nun, die von Ihnen eingetragenen Informationen sorgfältig zu prüfen. Sobald alle Angaben vollständig und korrekt sind, werden wir Ihr Konto freischalten und Sie darüber informieren.</p>
     <p>Sollten wir Rückfragen zu einzelnen Angaben haben, melden wir uns zeitnah bei Ihnen.</p>
     <p>Wir freuen uns auf die Zusammenarbeit und stehen Ihnen bei Fragen jederzeit gerne zur Verfügung.</p>
     <p style="margin-top: 30px;">Mit freundlichen Grüßen,<br><strong>Mazen Uklah</strong><br>Geschäftsführer</p>
-    <p style="margin: 0;"><strong>Islamicheck</strong><br><a href="mailto:mazen.uklah@islamicheck.de" style="color: #0073aa; text-decoration: none;">mazen.uklah@islamicheck.de</a><br>Tel.- WhatsApp: 026639790105</p>
+    <p style="margin: 0;"><strong>*****</strong><br><a href="mailto:####@####.de" style="color: #0073aa; text-decoration: none;">####@####.de</a><br>Tel.- WhatsApp: 026639790105</p>
 </div>
 ',
                 esc_html($full_name),
                 esc_html($username),
                 esc_html($vendor_email),
                 esc_url(site_url('/my-account/')),
-                esc_url(site_url('/wp-content/uploads/2025/05/AGB_Islamicheck-3.pdf'))
+                esc_url(site_url('/wp-content/uploads/2025/05/AGB-3.pdf'))
             );
             
             // Use WP Mail SMTP to send the email with attachment
@@ -528,12 +528,12 @@ class Improved_Vendor_Registration {
             
             // Also send a notification to admin
             $admin_email = get_option('admin_email');
-            $admin_subject = sprintf(__('Neuer Verkäufer bei Islami Check: %s', 'dokan'), $full_name);
+            $admin_subject = sprintf(__('Neuer Verkäufer bei *****: %s', 'dokan'), $full_name);
             
             $admin_message = sprintf(
                 '<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 5px;">
                     <h2 style="color: #333;">Neuer Verkäufer registriert</h2>
-                    <p>Ein neuer Verkäufer hat sich bei Islami Check registriert.</p>
+                    <p>Ein neuer Verkäufer hat sich bei ***** registriert.</p>
                     <p>Details des Verkäufers:</p>
                     <ul>
                         <li><strong>Name:</strong> %s</li>
