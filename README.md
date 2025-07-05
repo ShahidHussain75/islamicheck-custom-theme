@@ -1,6 +1,6 @@
 # IslamiCheck Theme Documentation
 
-This is a child theme for the Astra WordPress theme, specifically customized for IslamiCheck. The theme includes various custom functionalities for vendor management, registration, and WooCommerce integration.
+This is a child theme for the Astra WordPress theme, specifically customized for IslamiCheck. The theme includes various custom functionalities for vendor management, registration, and WooCommerce integration for Dokan.
 
 ## Theme Structure
 
